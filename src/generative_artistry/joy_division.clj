@@ -22,7 +22,7 @@
 
 (defn draw-line [line]
   (q/begin-shape)
-  (doseq [[x y]line]
+  (doseq [[x y] line]
     (q/curve-vertex x y))
   (q/end-shape))
 
@@ -41,7 +41,7 @@
 
 (defn -main [& args]
   (q/defsketch joy-division
-               :title "joy division"
-               :size [3000 2000]
-               :setup setup
-               :draw draw))
+    :title "joy division"
+    :size [3000 2000]
+    :setup setup
+    :draw draw))

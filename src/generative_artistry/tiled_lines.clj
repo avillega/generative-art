@@ -1,7 +1,7 @@
 (ns generative-artistry.tiled-lines
   (:require [quil.core :as q]))
 
- (defn setup []
+(defn setup []
   (q/color-mode :hsb 360 100 100 1.0)
   (q/no-loop))
 
@@ -36,9 +36,9 @@
 
 (defn -main [& args]
   (q/defsketch tiled-lines
-               :title "tilted-lines"
-               :size [2000 1000]
-               :setup setup
-               :draw draw
-               :features [:keep-on-top]))
+    :title "tilted-lines"
+    :size [2000 1000]
+    :setup setup
+    :draw draw
+    :features [:keep-on-top]))
 

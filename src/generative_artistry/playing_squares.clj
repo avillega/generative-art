@@ -21,14 +21,14 @@
   (q/stroke 0 0 0)
   (q/stroke-weight 3)
   (q/no-fill)
-    (q/rect-mode :center)
+  (q/rect-mode :center)
   (doseq [x (range 5 100 5)
           y (range 5 100 5)
           :let [r (max 0.3 (gauss 1 0.2))]]
     (q/with-translation [(w x) (h y)]
       (loop [size 5]
         (when (> size 0)
-          (q/rect (* 2 (q/random-gaussian)) (* 2 (q/random-gaussian))  (w size) (h size))
+          (q/rect (* 2 (q/random-gaussian)) (* 2 (q/random-gaussian)) (w size) (h size))
           (recur (- size r))))))
   (q/save "playing-squares.png"))
 
@@ -37,7 +37,7 @@
 
 (defn -main [& args]
   (q/defsketch playing-squares
-               :title "playing squares"
-               :size [2000 2000]
-               :setup setup
-               :draw draw))
+    :title "playing squares"
+    :size [2000 2000]
+    :setup setup
+    :draw draw))
