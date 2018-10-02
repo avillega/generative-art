@@ -18,19 +18,19 @@
              [355 54 96 0.5]])
 
 (defn create-dot-row [height]
-  (let [start (if (even? (quot height 10)) 10 5)]
-    (for [x (range start 100 10)]
+  (let [start (if (even? height) 3/2 3)]
+    (for [x (range start 100 3)]
       (->> [x height]
-           (map #(+ (range-random 4) %))))))
+           (map #(+ (range-random 3/2) %))))))
 
-(def my-memo (memoize create-dot-row))
+(def create-row (memoize create-dot-row))
 
 (defn create-dot-grid [step]
   (for [x (range step (- 100 step) step)
         :let [next (+ x step)]]
     (cond
-      (odd? (quot x 10)) (interleave (my-memo x) (my-memo next))
-      :else (interleave (my-memo next) (my-memo x)))))
+      (even? x) (interleave (create-row x) (create-row next))
+      :else (interleave (create-row next) (create-row x)))))
 
 
 (defn setup []
@@ -45,7 +45,7 @@
   (q/stroke 0 0 0)
   (q/no-fill)
   (q/stroke-weight 3)
-  (doseq [row (create-dot-grid 10)]
+  (doseq [row (create-dot-grid 3)]
     (loop [r row]
       (when (>= (count r) 3)
         (apply draw-triangle (take 3 r))
