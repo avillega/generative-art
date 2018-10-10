@@ -82,19 +82,7 @@
       (q/stroke 0 0 20 0.1)
       (doseq [y (range actual (+ actual (* step n-steps)) step)
               x (range min-r max-r step)]
-        (draw-variation [x y] 1))
-      #_(q/stroke 0 0 70 0.1)
-      #_(doseq [y (range actual (+ actual (* step n-steps)) step)
-              x (range -3 3 step)]
-        (draw-variation [x y] 1))
-      #_(q/stroke 300 70 50 0.1)
-      #_(doseq [y (range actual (+ actual (* step n-steps)) step)
-              x (range -3 3 step)]
-        (draw-variation [x y] 0.5))
-      #_(q/stroke 0 0 20 0.1)
-      #_(doseq [y (range actual (+ actual (* step n-steps)) step)
-              x (range -3 3 step)]
-        (draw-variation [x y] 0.25)))
+        (draw-variation [x y] 1)))
     (do
       ;(q/save (str "results/variations-" (System/currentTimeMillis) ".png"))
       (println "done")
