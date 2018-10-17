@@ -64,7 +64,7 @@
 
 (defn setup []
   (q/color-mode :hsb 360 100 100 1.0)
-  (q/background 45 10 100)
+  (q/background 50 5 100)
   (q/stroke 0 0 20 0.1)
   min-r)
 

@@ -26,3 +26,6 @@
 
 (defn interpolate-point [[x1 y1] [x2 y2] amt]
   [(q/lerp x1 x2 amt) (q/lerp y1 y2 amt)])
+
+(defn +vec [[x1 y1] [x2 y2]]
+  [(+ x1 x2) (+ y1 y2)])
