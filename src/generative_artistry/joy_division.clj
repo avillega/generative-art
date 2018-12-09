@@ -39,9 +39,8 @@
   )
 
 
-(defn -main [& args]
-  (q/defsketch joy-division
-    :title "joy division"
-    :size [3000 2000]
-    :setup setup
-    :draw draw))
+(q/defsketch joy-division
+  :title "joy division"
+  :size [3000 2000]
+  :setup setup
+  :draw draw)

@@ -4,8 +4,8 @@
 
 (defn line [level sx sy]
   (let [l (q/map-range level 0 10 0 20)
-        ex (+ sx (range-random l))
-        ey (+ sy (range-random l))
+        ex (+ sx (random-range l))
+        ey (+ sy (random-range l))
         children (when (< level 10)
                    (repeatedly 3 #(line (inc level) ex ey)))]
     {:start    [sx sy]
@@ -33,10 +33,9 @@
     (draw-tree tree))
   (q/save "results/factal-tree.png"))
 
-(defn -main [& args]
-  (q/defsketch first-fractal
-    :title "first-fractal"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch first-fractal
+  :title "first-fractal"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])

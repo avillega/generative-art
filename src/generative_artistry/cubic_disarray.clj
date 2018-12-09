@@ -35,9 +35,8 @@
 
 
 
-(defn -main [& args]
-  (q/defsketch cubic-disarray
-    :title "cubic disarray"
-    :size [2000 2000]
-    :setup setup
-    :draw draw))
+(q/defsketch cubic-disarray
+  :title "cubic disarray"
+  :size [2000 2000]
+  :setup setup
+  :draw draw)

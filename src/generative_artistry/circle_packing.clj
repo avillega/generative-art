@@ -59,10 +59,9 @@
       (q/ellipse (w x) (h y) (w r) (h r))
       (q/point (w x) (h y)))))
 
-(defn -main [& args]
-  (q/defsketch circle-packing
-    :title "Circle packing"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch circle-packing
+  :title "Circle packing"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])

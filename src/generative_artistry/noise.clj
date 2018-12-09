@@ -39,13 +39,12 @@
   (q/rect (w 10) (h 10) (w 80) (h 80))
   (q/save (str "results/" title ".png")))
 
-(defn -main [& args]
-  (q/defsketch noise
-    :title title
-    :renderer :p2d
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :mouse-clicked save-image
-    :features []
-    :middleware []))
+(q/defsketch noise
+  :title title
+  :renderer :p2d
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :mouse-clicked save-image
+  :features []
+  :middleware [])

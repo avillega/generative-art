@@ -23,9 +23,7 @@
     (q/vertex (w x) (h y)))
   (doseq [[[x1 y1] [x2 y2]] (partition-all 2 (curve (next control-points)))]
     (q/quadratic-vertex (w x1) (h y1) (w x2) (h y2)))
-  (let [[x y] (last control-points)]
-    (q/vertex (w x) (h y)))
-  (q/end-shape))
+  (q/end-shape :close))
 
 (defn setup []
   (q/color-mode :hsb 360 100 100 1.0)
@@ -39,7 +37,7 @@
 (defn update-state [{:keys [points times mean-rad] :as state}]
   (if (< times 100)
     (-> state
-        (assoc :points (map #(+vec % [(range-random 0.3) (range-random 0.3)]) points))
+        (assoc :points (map #(+vec % [(random-range 0.3) (random-range 0.3)]) points))
         (update :times inc))
     (-> state
         (assoc :points (control-points mean-rad))

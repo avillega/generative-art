@@ -51,10 +51,9 @@
         (apply draw-triangle (take 3 r))
         (recur (rest r))))))
 
-(defn -main [& args]
-  (q/defsketch triangular-mesh
-    :title "triangular-mesh"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch triangular-mesh
+  :title "triangular-mesh"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])

@@ -45,10 +45,9 @@
     (doseq [t triangles]
       (apply draw-triangle t))))
 
-(defn -main [& args]
-  (q/defsketch triangle-colors
-    :title "triangle-colors"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch triangle-colors
+  :title "triangle-colors"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])

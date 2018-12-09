@@ -35,9 +35,8 @@
 
 
 
-(defn -main [& args]
-  (q/defsketch playing-squares
-    :title "playing squares"
-    :size [2000 2000]
-    :setup setup
-    :draw draw))
+(q/defsketch playing-squares
+  :title "playing squares"
+  :size [2000 2000]
+  :setup setup
+  :draw draw)

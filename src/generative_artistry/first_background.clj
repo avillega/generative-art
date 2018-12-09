@@ -20,7 +20,7 @@
       (q/rect (w x) (w y) (w 2) (h 2)))))
 
 (defn random-circle-point [f radians center rad]
-  (+ center (* (+ (range-random 0.5) rad) (f radians))))
+  (+ center (* (+ (random-range 0.5) rad) (f radians))))
 
 (defn random-circle [x-center y-center]
   (let [radius (gauss 20 2)]
@@ -52,11 +52,10 @@
     (draw-circle (random-circle (gauss 50 1) (gauss 50 1))))
   (q/save "results/the-back-ground.png"))
 
-(defn -main [& args]
-  (q/defsketch first-background
-    :title "first bacground"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch first-background
+  :title "first bacground"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])
 

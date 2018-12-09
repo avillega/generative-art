@@ -52,12 +52,11 @@
       (q/ellipse (w x) (h y) (w r) (h r)))
     (q/no-loop)))
 
-(defn -main [& args]
-  (q/defsketch circle-packing-2
-    :title "circle packing 2"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :update update-state
-    :features []
-    :middleware [m/fun-mode]))
+(q/defsketch circle-packing-2
+  :title "circle packing 2"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :update update-state
+  :features []
+  :middleware [m/fun-mode])

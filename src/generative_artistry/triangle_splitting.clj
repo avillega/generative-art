@@ -66,10 +66,9 @@
   (q/save "results/aesthetically-pleasing-recursion.png"))
 
 
-(defn -main [& args]
-  (q/defsketch triangular-mesh
-    :title "triangular-mesh"
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :features []))
+(q/defsketch triangular-mesh
+  :title "triangular-mesh"
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :features [])

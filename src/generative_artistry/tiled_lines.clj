@@ -30,15 +30,13 @@
         y-step 2]
     (doseq [x (range 2 98 x-step)
             y (range 2 98 y-step)]
-      (println x y)
       (q/stroke (q/map-range x 2 98 180 250) 50 (q/map-range y 2 98 50 100) 1)
       (line (w x) (h y) (w x-step) (h y-step)))))
 
-(defn -main [& args]
-  (q/defsketch tiled-lines
-    :title "tilted-lines"
-    :size [2000 1000]
-    :setup setup
-    :draw draw
-    :features [:keep-on-top]))
+(q/defsketch tiled-lines
+  :title "tilted-lines"
+  :size [2000 1000]
+  :setup setup
+  :draw draw
+  :features [:keep-on-top])
 

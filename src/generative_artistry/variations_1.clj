@@ -89,14 +89,13 @@
       (println abcd4)
       (q/no-loop))))
 
-(defn -main [& args]
-  (q/defsketch variations-1
-    :title "variations 1"
-    :renderer :p2d
-    :size [2000 2000]
-    :setup setup
-    :draw draw
-    :update update-state
-    :settings #(q/smooth 8)
-    :features []
-    :middleware [m/fun-mode]))
+(q/defsketch variations-1
+  :title "variations 1"
+  :renderer :p2d
+  :size [2000 2000]
+  :setup setup
+  :draw draw
+  :update update-state
+  :settings #(q/smooth 8)
+  :features []
+  :middleware [m/fun-mode])
