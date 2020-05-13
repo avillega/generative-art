@@ -1,6 +1,6 @@
 # Generative Art
 
-A set of Quil sketches inspired in works of great generative artists. The main goal of his repo is to display some of my initial works
+A set of Quil sketches inspired in works of great generative artists. The main goal of this repo is to display some of my initial works
 
 ## Some of my favorites
 
